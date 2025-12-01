@@ -1,0 +1,216 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="700" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Multi-Site Company Network Topology
+  </text>
+  
+  <!-- Internet/Cloud -->
+  <ellipse cx="700" cy="100" rx="80" ry="50" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+  <text x="700" y="105" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Internet</text>
+  <text x="700" y="125" font-size="12" text-anchor="middle" fill="white">(Cloud)</text>
+  
+  <!-- Router Branch 1 -->
+  <rect x="250" y="200" width="120" height="80" rx="10" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="310" y="235" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Branch1</text>
+  <text x="310" y="255" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Router</text>
+  <text x="310" y="272" font-size="10" text-anchor="middle" fill="white">ZB11-RTR</text>
+  
+  <!-- Router Branch 2 -->
+  <rect x="1030" y="200" width="120" height="80" rx="10" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="1090" y="235" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Branch2</text>
+  <text x="1090" y="255" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Router</text>
+  <text x="1090" y="272" font-size="10" text-anchor="middle" fill="white">br2-RTR</text>
+  
+  <!-- Connection: Cloud to Router1 -->
+  <line x1="660" y1="130" x2="310" y2="200" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="450" y="155" font-size="11" fill="#3498db" font-weight="bold">Gi0/0</text>
+  
+  <!-- Connection: Cloud to Router2 -->
+  <line x1="740" y1="130" x2="1090" y2="200" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="950" y="155" font-size="11" fill="#3498db" font-weight="bold">Gi0/0</text>
+  
+  <!-- Connection: Router to Router (Serial) -->
+  <line x1="370" y1="240" x2="1030" y2="240" stroke="#e74c3c" stroke-width="4"/>
+  <text x="700" y="230" font-size="11" fill="#e74c3c" font-weight="bold">Serial Cable</text>
+  <text x="420" y="235" font-size="10" fill="#c0392b">Se0/3/0</text>
+  <text x="970" y="235" font-size="10" fill="#c0392b">Se0/3/1</text>
+  
+  <!-- ========== BRANCH 1 ========== -->
+  
+  <!-- Switch 1 - Branch 1 -->
+  <rect x="150" y="350" width="100" height="60" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="200" y="375" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Switch1</text>
+  <text x="200" y="395" font-size="9" text-anchor="middle" fill="white">Branch1-SW1</text>
+  
+  <!-- Switch 2 - Branch 1 -->
+  <rect x="370" y="350" width="100" height="60" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="420" y="375" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Switch2</text>
+  <text x="420" y="395" font-size="9" text-anchor="middle" fill="white">Branch1-SW2</text>
+  
+  <!-- Connection: Router1 to Switch1 -->
+  <line x1="280" y1="280" x2="200" y2="350" stroke="#2c3e50" stroke-width="3"/>
+  <text x="230" y="310" font-size="9" fill="#2c3e50">Fa0/0</text>
+  
+  <!-- Connection: Router1 to Switch2 -->
+  <line x1="340" y1="280" x2="420" y2="350" stroke="#2c3e50" stroke-width="3"/>
+  <text x="390" y="310" font-size="9" fill="#2c3e50">Fa0/1</text>
+  
+  <!-- Redundant links between switches -->
+  <line x1="250" y1="370" x2="370" y2="370" stroke="#f39c12" stroke-width="3"/>
+  <line x1="250" y1="390" x2="370" y2="390" stroke="#f39c12" stroke-width="3"/>
+  <text x="310" y="360" font-size="9" fill="#f39c12" font-weight="bold">Redundant</text>
+  
+  <!-- Branch 1 Devices -->
+  <!-- PC-HR -->
+  <rect x="50" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="85" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-HR</text>
+  <text x="85" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 10</text>
+  <line x1="170" y1="410" x2="85" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- PC-IT -->
+  <rect x="140" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="175" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-IT</text>
+  <text x="175" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 20</text>
+  <line x1="190" y1="410" x2="175" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- PC-Sales -->
+  <rect x="385" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="420" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-Sales</text>
+  <text x="420" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 30</text>
+  <line x1="420" y1="410" x2="420" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- DHCP Server -->
+  <rect x="230" y="480" width="70" height="50" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="265" y="497" font-size="9" font-weight="bold" text-anchor="middle" fill="white">DHCP</text>
+  <text x="265" y="510" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Server</text>
+  <text x="265" y="523" font-size="7" text-anchor="middle" fill="white">Branch1</text>
+  <line x1="210" y1="410" x2="265" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- DNS Server -->
+  <rect x="310" y="480" width="70" height="50" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="345" y="497" font-size="9" font-weight="bold" text-anchor="middle" fill="white">DNS</text>
+  <text x="345" y="510" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Server</text>
+  <text x="345" y="523" font-size="7" text-anchor="middle" fill="white">Branch1</text>
+  <line x1="230" y1="410" x2="345" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- Web Server -->
+  <rect x="465" y="480" width="70" height="50" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="500" y="497" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Web</text>
+  <text x="500" y="510" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Server</text>
+  <text x="500" y="523" font-size="7" text-anchor="middle" fill="white">Shared</text>
+  <line x1="440" y1="410" x2="500" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- ========== BRANCH 2 ========== -->
+  
+  <!-- Switch 1 - Branch 2 -->
+  <rect x="930" y="350" width="100" height="60" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="980" y="375" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Switch1</text>
+  <text x="980" y="395" font-size="9" text-anchor="middle" fill="white">Branch2-SW1</text>
+  
+  <!-- Switch 2 - Branch 2 -->
+  <rect x="1150" y="350" width="100" height="60" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="1200" y="375" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Switch2</text>
+  <text x="1200" y="395" font-size="9" text-anchor="middle" fill="white">Branch2-SW2</text>
+  
+  <!-- Connection: Router2 to Switch1 -->
+  <line x1="1060" y1="280" x2="980" y2="350" stroke="#2c3e50" stroke-width="3"/>
+  <text x="1010" y="310" font-size="9" fill="#2c3e50">Fa0/0</text>
+  
+  <!-- Connection: Router2 to Switch2 -->
+  <line x1="1120" y1="280" x2="1200" y2="350" stroke="#2c3e50" stroke-width="3"/>
+  <text x="1170" y="310" font-size="9" fill="#2c3e50">Fa0/1</text>
+  
+  <!-- Redundant links between switches -->
+  <line x1="1030" y1="370" x2="1150" y2="370" stroke="#f39c12" stroke-width="3"/>
+  <line x1="1030" y1="390" x2="1150" y2="390" stroke="#f39c12" stroke-width="3"/>
+  <text x="1090" y="360" font-size="9" fill="#f39c12" font-weight="bold">Redundant</text>
+  
+  <!-- Branch 2 Devices -->
+  <!-- PC-HR -->
+  <rect x="870" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="905" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-HR</text>
+  <text x="905" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 40</text>
+  <line x1="960" y1="410" x2="905" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- PC-IT -->
+  <rect x="950" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="985" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-IT</text>
+  <text x="985" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 50</text>
+  <line x1="975" y1="410" x2="985" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- PC-Sales -->
+  <rect x="1165" y="480" width="70" height="50" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="1200" y="500" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PC-Sales</text>
+  <text x="1200" y="515" font-size="8" text-anchor="middle" fill="white">VLAN 60</text>
+  <line x1="1200" y1="410" x2="1200" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- DHCP Server -->
+  <rect x="1030" y="480" width="70" height="50" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="1065" y="497" font-size="9" font-weight="bold" text-anchor="middle" fill="white">DHCP</text>
+  <text x="1065" y="510" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Server</text>
+  <text x="1065" y="523" font-size="7" text-anchor="middle" fill="white">Branch2</text>
+  <line x1="995" y1="410" x2="1065" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- DNS Server -->
+  <rect x="1245" y="480" width="70" height="50" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="1280" y="497" font-size="9" font-weight="bold" text-anchor="middle" fill="white">DNS</text>
+  <text x="1280" y="510" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Server</text>
+  <text x="1280" y="523" font-size="7" text-anchor="middle" fill="white">Branch2</text>
+  <line x1="1220" y1="410" x2="1280" y2="480" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 600)">
+    <text x="0" y="0" font-size="18" font-weight="bold" fill="#2c3e50">Legend:</text>
+    
+    <rect x="0" y="15" width="40" height="25" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <text x="50" y="32" font-size="12" fill="#2c3e50">Router</text>
+    
+    <rect x="150" y="15" width="40" height="25" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="200" y="32" font-size="12" fill="#2c3e50">Switch</text>
+    
+    <rect x="300" y="15" width="40" height="25" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+    <text x="350" y="32" font-size="12" fill="#2c3e50">PC</text>
+    
+    <rect x="450" y="15" width="40" height="25" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+    <text x="500" y="32" font-size="12" fill="#2c3e50">Server (DHCP/DNS)</text>
+    
+    <rect x="700" y="15" width="40" height="25" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+    <text x="750" y="32" font-size="12" fill="#2c3e50">Web Server</text>
+    
+    <line x1="0" y1="70" x2="40" y2="70" stroke="#e74c3c" stroke-width="4"/>
+    <text x="50" y="75" font-size="12" fill="#2c3e50">Serial Cable (Red)</text>
+    
+    <line x1="250" y1="70" x2="290" y2="70" stroke="#2c3e50" stroke-width="3"/>
+    <text x="300" y="75" font-size="12" fill="#2c3e50">Straight-Through (Black)</text>
+    
+    <line x1="550" y1="70" x2="590" y2="70" stroke="#f39c12" stroke-width="3"/>
+    <text x="600" y="75" font-size="12" fill="#2c3e50">Redundant Links (Orange)</text>
+    
+    <line x1="850" y1="70" x2="890" y2="70" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="900" y="75" font-size="12" fill="#2c3e50">Cross-Over to Internet (Blue)</text>
+  </g>
+  
+  <!-- Device Count Summary -->
+  <g transform="translate(50, 750)">
+    <text x="0" y="0" font-size="18" font-weight="bold" fill="#2c3e50">Device Summary:</text>
+    <text x="0" y="25" font-size="13" fill="#2c3e50">• Routers: 2 (للربط بين الفرعين + NAT)</text>
+    <text x="0" y="45" font-size="13" fill="#2c3e50">• Switches: 4 (2 لكل فرع للـ STP Redundancy)</text>
+    <text x="0" y="65" font-size="13" fill="#2c3e50">• PCs: 6 (3 لكل فرع - HR, IT, Sales)</text>
+    <text x="0" y="85" font-size="13" fill="#2c3e50">• Servers: 5 (DHCP ×2, DNS ×2, Web ×1 Shared)</text>
+    <text x="0" y="105" font-size="13" fill="#2c3e50">• Cloud: 1 (لـ simulate الإنترنت)</text>
+  </g>
+  
+  <!-- VLAN Info -->
+  <g transform="translate(700, 750)">
+    <text x="0" y="0" font-size="18" font-weight="bold" fill="#2c3e50">VLANs:</text>
+    <text x="0" y="25" font-size="12" fill="#2c3e50" font-weight="bold">Branch 1:</text>
+    <text x="0" y="42" font-size="11" fill="#2c3e50">• VLAN 10: HR (192.168.10.0/24)</text>
+    <text x="0" y="57" font-size="11" fill="#2c3e50">• VLAN 20: IT (192.168.20.0/24)</text>
+    <text x="0" y="72" font-size="11" fill="#2c3e50">• VLAN 30: Sales (192.168.30.0/24)</text>
+    
+    <text x="300" y="25" font-size="12" fill="#2c3e50" font-weight="bold">Branch 2:</text>
+    <text x="300" y="42" font-size="11" fill="#2c3e50">• VLAN 40: HR (192.168.40.0/24)</text>
+    <text x="300" y="57" font-size="11" fill="#2c3e50">• VLAN 50: IT (192.168.50.0/24)</text>
+    <text x="300" y="72" font-size="11" fill="#2c3e50">• VLAN 60: Sales (192.168.60.0/24)</text>
+  </g>
+</svg>
